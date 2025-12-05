@@ -1,0 +1,3 @@
+command script import tools/lldb_pretty_printers.py
+type category enable zig.lang
+type category enable zig.std
