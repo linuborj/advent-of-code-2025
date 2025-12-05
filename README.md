@@ -1,1 +1,7 @@
-# advent-of-code-2025
+```
+  *    ❄        *
+    ❄      *        ❄
+*        ADVENT OF CODE 2025        *
+    ❄      *        ❄
+  *    ❄        *
+```
