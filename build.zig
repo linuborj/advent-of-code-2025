@@ -16,20 +16,12 @@ pub fn build(b: *std.Build) void {
         },
     });
 
-    // Day 01
     addDay(b, "day01", target, optimize, common, mecha.module("mecha"));
-
-    // Day 02
     addDay(b, "day02", target, optimize, common, mecha.module("mecha"));
-
-    // Day 03
     addDay(b, "day03", target, optimize, common, mecha.module("mecha"));
-
-    // Day 04
     addDay(b, "day04", target, optimize, common, mecha.module("mecha"));
-
-    // Day 05
     addDay(b, "day05", target, optimize, common, mecha.module("mecha"));
+    addDay(b, "day06", target, optimize, common, mecha.module("mecha"));
 }
 
 fn addDay(
