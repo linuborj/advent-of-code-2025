@@ -24,6 +24,7 @@ pub fn build(b: *std.Build) void {
     addDay(b, "day06", target, optimize, common, mecha.module("mecha"));
     addDay(b, "day07", target, optimize, common, mecha.module("mecha"));
     addDay(b, "day08", target, optimize, common, mecha.module("mecha"));
+    addDay(b, "day09", target, optimize, common, mecha.module("mecha"));
 }
 
 fn addDay(
