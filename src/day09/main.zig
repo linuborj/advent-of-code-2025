@@ -52,7 +52,7 @@ const Edge = struct {
         return self.oppositeSides(other.a, other.b) and other.oppositeSides(self.a, self.b);
     }
 
-    fn horizontalRayCrossesAt(self: Edge, rayOrigin: V2) bool {
+    fn horizontalRayCrossesToTheRightOf(self: Edge, rayOrigin: V2) bool {
         if ((self.a.y > rayOrigin.y) == (self.b.y > rayOrigin.y)) return false;
         const xInt = self.b.x + @divTrunc((rayOrigin.y - self.b.y) * (self.a.x - self.b.x), (self.a.y - self.b.y));
         return rayOrigin.x < xInt;
@@ -111,7 +111,7 @@ fn inside(poly: []const V2, p: V2) bool {
 fn raycast(poly: []const V2, p: V2) bool {
     var result = false;
     for (0..poly.len) |i| {
-        if (polyEdge(poly, i).horizontalRayCrossesAt(p)) result = !result;
+        if (polyEdge(poly, i).horizontalRayCrossesToTheRightOf(p)) result = !result;
     }
     return result;
 }

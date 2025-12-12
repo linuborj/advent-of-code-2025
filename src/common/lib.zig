@@ -1,5 +1,8 @@
 const std = @import("std");
 
+pub const Rational = @import("rational.zig").Rational;
+pub const gauss = @import("gauss.zig");
+
 /// Read the entire contents of an input file for a given day
 pub fn readInput(allocator: std.mem.Allocator, comptime day: []const u8) ![]const u8 {
     const path = "inputs/" ++ day ++ ".txt";
